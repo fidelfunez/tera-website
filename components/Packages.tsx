@@ -101,8 +101,7 @@ export function Packages() {
               ) : null}
 
               <div className="mt-auto pt-2 text-xs text-white/40">
-                * Precios en USD. Consultanos por opciones de pago en lempiras o
-                en tu moneda local.
+                * Precios en USD. Consultanos por planes y opciones de pago en tu moneda local.
               </div>
             </motion.div>
           ))}
