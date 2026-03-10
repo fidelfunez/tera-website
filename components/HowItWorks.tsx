@@ -85,7 +85,7 @@ export function HowItWorks() {
 
                 {/* Content below node */}
                 <div className="mt-6 flex flex-col items-center text-center">
-                  <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-electric-blue/20 text-electric-blue">
+                  <div className="mb-3 hidden h-10 w-10 items-center justify-center rounded-lg bg-electric-blue/20 text-electric-blue md:inline-flex">
                     <step.icon className="h-5 w-5" />
                   </div>
                   <h3 className="text-base font-semibold">{step.title}</h3>

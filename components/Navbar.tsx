@@ -15,7 +15,7 @@ export function Navbar() {
             />
           </div>
           <div className="flex flex-col">
-            <span className="text-sm font-semibold tracking-tight md:text-base">
+            <span className="text-base font-semibold tracking-tight md:text-base">
               {siteConfig.name}
             </span>
             <span className="hidden text-xs text-white/60 md:inline">

@@ -179,7 +179,7 @@ export function WhyTera() {
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.35 }}
         >
-          <div className="flex h-24 w-24 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-white/10 md:h-20 md:w-20">
+          <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-white/10 md:h-24 md:w-24">
             {testimonial.imageUrl ? (
               <img
                 src={testimonial.imageUrl}
