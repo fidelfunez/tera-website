@@ -5,11 +5,11 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-black/40 py-6 text-xs text-white/60">
       <div className="container flex flex-col items-center justify-between gap-3 md:flex-row">
         <div className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 p-1.5">
+          <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-lg bg-white/10 p-0.5">
             <img
               src="/tera-logo-transparent.webp"
               alt={siteConfig.name}
-              className="h-full w-full object-contain"
+              className="h-full w-full scale-125 object-contain"
             />
           </div>
           <div className="flex flex-col">

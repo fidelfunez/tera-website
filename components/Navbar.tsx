@@ -7,11 +7,11 @@ export function Navbar() {
     <header className="sticky top-0 z-30 border-b border-white/5 bg-navy/80 backdrop-blur">
       <nav className="container flex h-16 items-center justify-between md:h-20">
         <div className="flex items-center gap-2">
-          <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 p-2">
+          <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-lg bg-white/10 p-1">
             <img
               src="/tera-logo-transparent.webp"
               alt={siteConfig.name}
-              className="h-full w-full object-contain"
+              className="h-full w-full scale-125 object-contain"
             />
           </div>
           <div className="flex flex-col">
