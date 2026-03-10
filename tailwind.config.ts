@@ -7,6 +7,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["'Plus Jakarta Sans'", "system-ui", "sans-serif"]
+      },
       colors: {
         navy: "#1A2E4A",
         "electric-blue": "#2563A8",

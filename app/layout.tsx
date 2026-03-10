@@ -1,12 +1,5 @@
-import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
-
-const fontSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-sans"
-});
 
 export const metadata = {
   title: "Tera | Páginas web modernas para negocios y profesionales en Honduras y LATAM",
@@ -62,8 +55,16 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="es" className={fontSans.variable}>
-      <body className="min-h-screen bg-navy text-white">
+    <html lang="es">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        />
+      </head>
+      <body className="min-h-screen bg-navy font-sans text-white">
         {children}
         <script
           type="application/ld+json"
