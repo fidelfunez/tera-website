@@ -1,7 +1,54 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { WHATSAPP_URL } from "@/config/whatsapp";
+
+const BUSINESS_TYPES = [
+  "Hotel",
+  "Airbnb",
+  "Inmobiliaria",
+  "Tienda Online",
+  "Startup",
+  "Restaurante",
+  "Clínica",
+  "Spa",
+  "Consultoría",
+  "Academia"
+];
+
+function TypewriterText({ words }: { words: string[] }) {
+  const [wordIndex, setWordIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const word = words[wordIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (!isDeleting && charIndex < word.length) {
+      timeout = setTimeout(() => setCharIndex((c) => c + 1), 80);
+    } else if (!isDeleting && charIndex === word.length) {
+      timeout = setTimeout(() => setIsDeleting(true), 1500);
+    } else if (isDeleting && charIndex > 0) {
+      timeout = setTimeout(() => setCharIndex((c) => c - 1), 40);
+    } else if (isDeleting && charIndex === 0) {
+      setIsDeleting(false);
+      setWordIndex((i) => (i + 1) % words.length);
+    }
+
+    return () => (timeout ? clearTimeout(timeout) : undefined);
+  }, [wordIndex, charIndex, isDeleting, words]);
+
+  const displayText = words[wordIndex]?.slice(0, charIndex) ?? "";
+
+  return (
+    <span>
+      {displayText}
+      <span className="animate-pulse">|</span>
+    </span>
+  );
+}
 
 export function Hero() {
   return (
@@ -19,6 +66,38 @@ export function Hero() {
           <h1 className="text-balance text-3xl font-semibold tracking-tight md:text-5xl">
             Tu negocio merece una página web que sí venda.
           </h1>
+
+          {/* Ventanita: solo visible en móvil, entre h1 y p */}
+          <div className="mx-auto w-full max-w-sm md:hidden">
+            <div className="relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-4 shadow-2xl shadow-black/40 backdrop-blur">
+              <div className="mb-3 flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-red-500/80" />
+                <span className="h-2 w-2 rounded-full bg-yellow-500/80" />
+                <span className="h-2 w-2 rounded-full bg-green-500/80" />
+                <span className="ml-2 text-xs text-white/60">www.tu-negocio.com</span>
+              </div>
+              <div className="rounded-xl bg-navy/70 p-4">
+                <div className="mb-4 h-6 w-24 rounded-full bg-white/10" />
+                <div className="mb-6 space-y-2">
+                  <div className="h-3 w-3/4 rounded-full bg-white/10" />
+                  <div className="h-3 w-2/3 rounded-full bg-white/5" />
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="h-20 rounded-xl bg-gradient-to-br from-electric-blue/40 to-tera-green/30" />
+                  <div className="space-y-2">
+                    <div className="h-3 w-full rounded-full bg-white/10" />
+                    <div className="h-3 w-5/6 rounded-full bg-white/5" />
+                    <div className="h-3 w-2/3 rounded-full bg-white/5" />
+                  </div>
+                </div>
+                <div className="mt-6 flex items-center justify-between">
+                  <div className="h-9 w-32 rounded-full bg-tera-green/80" />
+                  <div className="h-9 w-9 rounded-full bg-tera-green/60" />
+                </div>
+              </div>
+            </div>
+          </div>
+
           <p className="text-balance text-sm text-white/70 md:text-base">
             Diseñamos páginas web modernas para negocios como el tuyo — rápidas,
             fáciles de usar y pensadas para atraer clientes, no complicaciones.
@@ -46,7 +125,7 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="relative w-full max-w-md md:max-w-lg">
+        <div className="relative hidden w-full max-w-md md:block md:max-w-lg">
           <div className="relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-4 shadow-2xl shadow-black/40 backdrop-blur">
             <div className="mb-3 flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-red-500/80" />
@@ -77,9 +156,11 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="absolute -bottom-8 -right-6 hidden w-40 rounded-2xl border border-white/10 bg-navy/90 p-3 text-xs text-white/80 shadow-lg shadow-black/40 md:block">
-            <p className="font-semibold">Clínica Odontológica</p>
-            <p className="text-[11px] text-tera-green">+35% consultas online</p>
+          <div className="absolute -bottom-8 -right-6 hidden w-44 rounded-2xl border border-white/10 bg-navy/90 p-3 text-xs text-white/80 shadow-lg shadow-black/40 md:block">
+            <p className="min-h-[1.25em] font-semibold">
+              <TypewriterText words={BUSINESS_TYPES} />
+            </p>
+            <p className="text-[11px] text-tera-green">+35% más clientes</p>
             <p className="mt-1 text-[11px] text-white/60">
               Después de 4 semanas con su nuevo sitio.
             </p>
