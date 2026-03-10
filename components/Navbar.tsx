@@ -11,7 +11,7 @@ export function Navbar() {
             <img
               src="/tera-logo-transparent.webp"
               alt={siteConfig.name}
-              className="h-full w-full scale-110 object-contain"
+              className="h-full w-full scale-105 object-contain"
             />
           </div>
           <div className="flex flex-col">

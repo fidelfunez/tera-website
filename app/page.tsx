@@ -22,11 +22,7 @@ export default function Page() {
         <FAQ />
         <FinalCTA />
       </main>
-      <div className="bg-black/40">
-        <Footer />
-        {/* Extiende el color del footer en móvil para cubrir espacio/safe-area */}
-        <div className="min-h-16 md:min-h-0" aria-hidden />
-      </div>
+      <Footer />
       <BackToTopButton />
     </div>
   );
