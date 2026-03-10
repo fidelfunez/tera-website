@@ -183,7 +183,7 @@ export function WhyTera() {
             {testimonial.imageUrl ? (
               <img
                 src={testimonial.imageUrl}
-                alt=""
+                alt={`${testimonial.author}, ${testimonial.companyName}`}
                 className="h-full w-full object-cover"
               />
             ) : (
