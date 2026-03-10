@@ -3,9 +3,9 @@ export const siteConfig = {
   tagline: "Tu presencia digital, sin complicaciones.",
   description:
     "Creamos páginas web profesionales para pequeñas y medianas empresas en Honduras y Latinoamérica. Desde $299. Incluye SEO, Google My Business y WhatsApp.",
-  url: "https://tera.agency",
+  url: "https://teralatam.co",
   locale: "es_HN",
-  ogImage: "/og-image.png",
+  ogImage: "/tera-logo.webp",
   navLinks: [
     { href: "#paquetes", label: "Paquetes" },
     { href: "#como-funciona", label: "Cómo funciona" },
