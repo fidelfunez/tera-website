@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { faqs } from "@/config/faq";
+import { faqs } from "../config/faq";
 import { useState } from "react";
 
 export function FAQ() {

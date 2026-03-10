@@ -1,5 +1,5 @@
 import "./globals.css";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "../config/site";
 
 export const metadata = {
   title: "Tera | Páginas web modernas para negocios y profesionales en Honduras y LATAM",

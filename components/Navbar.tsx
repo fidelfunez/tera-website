@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { siteConfig } from "@/config/site";
-import { WHATSAPP_URL } from "@/config/whatsapp";
+import { siteConfig } from "../config/site";
+import { WHATSAPP_URL } from "../config/whatsapp";
 
 export function Navbar() {
   return (

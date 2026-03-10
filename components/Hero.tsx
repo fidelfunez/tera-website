@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { WHATSAPP_URL } from "@/config/whatsapp";
+import { WHATSAPP_URL } from "../config/whatsapp";
 
 const BUSINESS_TYPES = [
   "Hotel",

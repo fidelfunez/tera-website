@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { packages, monthlyManagement } from "@/config/packages";
+import { packages, monthlyManagement } from "../config/packages";
 
 export function Packages() {
   return (
