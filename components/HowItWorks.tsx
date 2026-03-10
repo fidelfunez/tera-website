@@ -60,7 +60,7 @@ export function HowItWorks() {
             {steps.map((step, index) => (
               <motion.div
                 key={step.title}
-                className="relative flex flex-1 flex-col items-center md:max-w-[280px]"
+                className="relative flex flex-1 flex-col items-center rounded-2xl border border-transparent p-4 transition hover:-translate-y-1 hover:border-electric-blue/40 hover:bg-navy/40 md:max-w-[280px]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}

@@ -110,7 +110,7 @@ export function Packages() {
 
         {/* Gestión Mensual - add-on opcional */}
         <motion.div
-          className="mt-12 rounded-2xl border border-white/10 bg-navy/60 p-6 md:mt-16 md:flex md:items-center md:justify-between md:gap-8 md:p-8"
+          className="mt-12 rounded-2xl border border-white/10 bg-navy/60 p-6 transition hover:-translate-y-1 hover:border-electric-blue/60 hover:shadow-[0_20px_60px_rgba(37,99,168,0.45)] md:mt-16 md:flex md:items-center md:justify-between md:gap-8 md:p-8"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
