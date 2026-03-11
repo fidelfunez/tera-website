@@ -32,6 +32,9 @@ export function Footer() {
           <a href="#contacto" className="text-white transition hover:opacity-90">
             Contacto
           </a>
+          <a href="/privacidad" className="text-white transition hover:opacity-90">
+            Privacidad
+          </a>
         </div>
         <div className="text-[11px] text-center md:text-right">
           <p>Hecho con 🤍 en Honduras 🇭🇳 para toda Latinoamérica</p>

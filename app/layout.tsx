@@ -1,5 +1,8 @@
 import "./globals.css";
+import Script from "next/script";
 import { siteConfig } from "../config/site";
+
+const GA_MEASUREMENT_ID = "G-0YVW95Z8SV";
 
 export const metadata = {
   title: "Tera | Páginas web modernas para negocios y profesionales en Honduras y LATAM",
@@ -172,6 +175,18 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-navy font-sans text-white">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         {children}
         <script
           type="application/ld+json"
