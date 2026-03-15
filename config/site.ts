@@ -14,6 +14,11 @@ export const siteConfig = {
     { href: "#contacto", label: "Contacto" }
   ],
   contactEmail: "hola@teralatam.co",
+  /** Redes sociales - actualizá con las URLs reales */
+  social: {
+    facebook: "https://www.facebook.com/teralatam.co",
+    instagram: "https://www.instagram.com/teralatam/"
+  },
   /** Social proof para WhyTera - actualizá el número cuando tengas clientes reales */
   socialProof: "+50 negocios en Honduras y LATAM ya confían en nosotros",
   /** Review/testimonial para WhyTera */
