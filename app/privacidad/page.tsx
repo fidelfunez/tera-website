@@ -6,7 +6,10 @@ import { siteConfig } from "../../config/site";
 export const metadata = {
   title: "Política de Privacidad | Tera",
   description:
-    "Política de privacidad de Tera. Cómo recopilamos, usamos y protegemos tu información cuando visitas teralatam.co."
+    "Política de privacidad de Tera. Cómo recopilamos, usamos y protegemos tu información cuando visitas teralatam.co.",
+  alternates: {
+    canonical: `${siteConfig.url}/privacidad`
+  }
 };
 
 export default function PrivacidadPage() {

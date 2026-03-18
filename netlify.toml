@@ -1,0 +1,12 @@
+# Redirect www to non-www para consistencia SEO
+[[redirects]]
+  from = "https://www.teralatam.co/*"
+  to = "https://teralatam.co/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.teralatam.co"
+  to = "https://teralatam.co"
+  status = 301
+  force = true
